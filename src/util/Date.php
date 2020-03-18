@@ -44,11 +44,11 @@ class Date
 
     public function changeDay($day): void
     {
-        $new_day = $this->day + $this->day;
+        $new_day = $this->day + $day;
         if ($new_day > 31) {
             $new_day -= 31;
         }
-        $this->day += $new_day;
+        $this->day = $new_day;
     }
 
     public function getMonth()
@@ -62,7 +62,7 @@ class Date
         if ($new_month > 12) {
             $new_month -= 12;
         }
-        $this->month += $new_month;
+        $this->month = $new_month;
     }
 
     public function getYear()
