@@ -9,7 +9,7 @@ class Date
     private $year;
     private static $MONTHS = array("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec");
 
-    public function __construct($day, $month, $year)
+    private function __construct($day, $month, $year)
     {
         $arguments = func_num_args();
         if ($arguments == 0) {
@@ -41,7 +41,7 @@ class Date
                 $month = $months;
             }
             else{
-                throw new \DateException();
+               throw new DateException();
             }
         }
         return "$this->day/$month/$this->year";
@@ -75,6 +75,10 @@ class Date
     public function changeYear($year): void
     {
         $this->year = $year;
+    }
+
+    public static function make($day,$month, $year){
+      return new Date($day,$month,$year);
     }
 
 }
