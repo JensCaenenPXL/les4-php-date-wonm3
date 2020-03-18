@@ -39,7 +39,7 @@ class Date
 
      foreach(self::$MONTHS as $m){
          if(m == $this->month ){
-             return "$this->day/m/$this->year";
+             return "$this->day/$m/$this->year";
              break;
          }
     }
