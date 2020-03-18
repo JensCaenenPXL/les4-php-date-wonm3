@@ -6,6 +6,7 @@ class Date
     private $day;
     private $month;
     private $year;
+    private static array $MONTHS = array("jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec");
 
     public function __construct($day, $month, $year)
     {
@@ -30,10 +31,12 @@ class Date
 
     public function print()
     {
+        return "$this->day/$this->month/$this->year";
     }
 
     public function printMonth()
     {
+
     }
 
     public function getDay()
