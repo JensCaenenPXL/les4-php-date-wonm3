@@ -11,12 +11,10 @@ class Date
 
     private function __construct($day = 1, $month = 1, $year = 2008)
     {
-
         if ($day > 31) {
             throw new DateException("Er zijn maar 31 dagen!");
         } else {
             $this->day = $day;
-
         }
 
         if ($month > 12) {
@@ -45,7 +43,7 @@ class Date
 
     public function changeDay($day): void
     {
-        $new_day = $this->day + $this->day;
+        $new_day = $this->day + $day;
         if ($new_day > 31) {
             $new_day -= 31;
         }
