@@ -4,9 +4,9 @@ namespace util;
 
 class Date
 {
-    private $day;
-    private $month;
-    private $year;
+    private int $day;
+    private int $month;
+    private int $year;
     private static array $MONTHS = array("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec");
 
     public function __construct($day, $month, $year)
