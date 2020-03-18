@@ -41,7 +41,11 @@ class Date
 
     public function printMonth()
     {
-        return $this->day . "/" . self::$MONTHS[$this->month - 1] . "/" . $this->year;
+        try {
+            return $this->day . "/" . self::$MONTHS[$this->month - 1] . "/" . $this->year;
+        } catch(DateException $DateException) {
+            throw new DateException();
+        }
     }
 
     public function getDay()
