@@ -2,6 +2,8 @@
 
 namespace util;
 
+use mysql_xdevapi\Exception;
+
 class Date
 {
     private int $day;
@@ -41,6 +43,7 @@ class Date
             if ($months == $this->month) {
                 $month = $months;
             }
+          
         }
         return "$this->day/$month/$this->year";
     }

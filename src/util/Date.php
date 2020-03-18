@@ -40,6 +40,9 @@ class Date
             if ($months == $this->month) {
                 $month = $months;
             }
+            else{
+                throw new \DateException("No correct month number");
+            }
         }
         return "$this->day/$month/$this->year";
     }
