@@ -1,4 +1,5 @@
 <?php
+
 namespace util;
 
 class Date
@@ -6,23 +7,22 @@ class Date
     private $day;
     private $month;
     private $year;
-    private static array $MONTHS = array("jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec");
+    private static array $MONTHS = array("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec");
 
     public function __construct($day, $month, $year)
     {
         $arguments = func_num_args();
-        if($arguments == 0){
+        if ($arguments == 0) {
             $this->day = 1;
             $this->month = 1;
             $this->year = 2008;
         }
 
-        if($arguments == 2){
+        if ($arguments == 2) {
             $this->day = $day;
             $this->month = $month;
             $this->year = 2008;
-        }
-        else{
+        } else {
             $this->day = $day;
             $this->month = $month;
             $this->year = $year;
@@ -76,8 +76,6 @@ class Date
     {
         $this->year = $year;
     }
-
-
 
 
 }
