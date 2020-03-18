@@ -32,6 +32,11 @@ class Date
     {
         // TODO: Implement __toString() method.
     }
+    public function __printMonth()
+    {
+        // TODO: Implement __printMonth() method.
+    }
+
 
     /**
      * @return mixed
