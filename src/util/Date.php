@@ -4,10 +4,10 @@ namespace util;
 
 class Date
 {
-    private int $day;
-    private int $month;
-    private int $year;
-    private static array $MONTHS = array("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec");
+    private $day;
+    private $month;
+    private $year;
+    private static $MONTHS = array("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec");
 
     public function __construct($day, $month, $year)
     {
