@@ -52,7 +52,7 @@ class Date
         return $this->day;
     }
 
-    public function setDay($day): void
+    public function changeDay($day): void
     {
         $this->day = $day;
     }
@@ -62,7 +62,7 @@ class Date
         return $this->month;
     }
 
-    public function setMonth($month): void
+    public function changeMonth($month): void
     {
         $this->month = $month;
     }
@@ -72,7 +72,7 @@ class Date
         return $this->year;
     }
 
-    public function setYear($year): void
+    public function changeYear($year): void
     {
         $this->year = $year;
     }

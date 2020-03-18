@@ -1,4 +1,8 @@
 <?php
+
+namespace util;
+use Exception;
+
 class DateException extends Exception
 {
 
