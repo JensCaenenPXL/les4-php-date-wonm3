@@ -11,7 +11,6 @@ class Date
 
     private function __construct($day = 1, $month = 1, $year = 2008)
     {
-        try{
         $arguments = func_num_args();
         if ($arguments == 0) {
             $this->day = 1;
@@ -27,11 +26,6 @@ class Date
             $this->month = $month;
             $this->year = $year;
         }
-        } catch(DateException $DateException) {
-            throw new DateException();
-        }
-
-
     }
 
     public function print()
@@ -41,11 +35,7 @@ class Date
 
     public function printMonth()
     {
-        try {
-            return $this->day . "/" . self::$MONTHS[$this->month - 1] . "/" . $this->year;
-        } catch(DateException $DateException) {
-            throw new DateException();
-        }
+        return $this->day . "/" . self::$MONTHS[$this->month - 1] . "/" . $this->year;
     }
 
     public function getDay()
