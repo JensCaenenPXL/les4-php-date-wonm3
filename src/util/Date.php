@@ -9,7 +9,7 @@ class Date
     private $year;
     private static $MONTHS = array("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec");
 
-    private function __construct($day, $month, $year)
+    private function __construct($day = 1, $month = 1, $year = 2008)
     {
         $arguments = func_num_args();
         if ($arguments == 0) {
