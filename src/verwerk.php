@@ -21,7 +21,7 @@ try {
     echo " of ";
     echo $date1->printMonth();
 
-} catch (\Exception $dateException){
+} catch (\util\DateException $dateException){
     echo $dateException->getMessage();
 }
 
