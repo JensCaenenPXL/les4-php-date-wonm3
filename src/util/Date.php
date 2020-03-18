@@ -15,7 +15,6 @@ class Date
             throw new DateException("Er zijn maar 31 dagen!");
         } else {
             $this->day = $day;
-
         }
 
         if ($month > 12) {
@@ -49,7 +48,7 @@ class Date
 
     public function changeDay($day): void
     {
-        $new_day = $this->day + $this->day;
+        $new_day = $this->day + $day;
         if ($new_day > 31) {
             $new_day -= 31;
         }
