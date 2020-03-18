@@ -37,6 +37,14 @@ class Date
     public function printMonth()
     {
 
+     foreach(self::$MONTHS as $m){
+         if(m == $this->month ){
+             return "$this->day/m/$this->year";
+             break;
+         }
+    }
+
+
     }
 
     public function getDay()
