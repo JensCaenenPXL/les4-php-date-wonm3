@@ -17,7 +17,6 @@ class Date
             $this->month = 1;
             $this->year = 2008;
         }
-
         if ($arguments == 2) {
             $this->day = $day;
             $this->month = $month;
@@ -36,17 +35,13 @@ class Date
 
     public function printMonth()
     {
-
-     foreach(self::$MONTHS as $m){
-         $m++;
-         if(m == $this->month ){
-
-             return "$this->day/$m/$this->year";
-             break;
-         }
-    }
-
-
+        $month = null;
+        foreach (self::$MONTHS as $months) {
+            if ($months == $this->month) {
+                $month = $months;
+            }
+        }
+        return "$this->day/$month/$this->year";
     }
 
     public function getDay()
@@ -78,6 +73,5 @@ class Date
     {
         $this->year = $year;
     }
-
 
 }
