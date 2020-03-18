@@ -4,10 +4,10 @@ namespace util;
 
 class Date
 {
-    private int $day;
-    private int $month;
-    private int $year;
-    private static array $MONTHS = array("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec");
+    private $day;
+    private $month;
+    private $year;
+    private static $MONTHS = array("jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec");
 
     public function __construct($day, $month, $year)
     {
@@ -40,6 +40,9 @@ class Date
             if ($months == $this->month) {
                 $month = $months;
             }
+            else{
+                throw new \DateException();
+            }
         }
         return "$this->day/$month/$this->year";
     }
@@ -49,7 +52,7 @@ class Date
         return $this->day;
     }
 
-    public function setDay($day): void
+    public function changeDay($day): void
     {
         $this->day = $day;
     }
@@ -59,7 +62,7 @@ class Date
         return $this->month;
     }
 
-    public function setMonth($month): void
+    public function changeMonth($month): void
     {
         $this->month = $month;
     }
@@ -69,7 +72,7 @@ class Date
         return $this->year;
     }
 
-    public function setYear($year): void
+    public function changeYear($year): void
     {
         $this->year = $year;
     }
