@@ -41,7 +41,7 @@ class Date
                 $month = $months;
             }
             else{
-                throw new \DateException("No correct month number");
+                throw new \DateException();
             }
         }
         return "$this->day/$month/$this->year";
