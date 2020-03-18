@@ -10,7 +10,7 @@ class DateException extends Exception
 
     public function __construct($details) {
         $this->details = $details;
-        parent::__construct();
+        parent::__construct($details);
     }
 
     public function __toString() {
