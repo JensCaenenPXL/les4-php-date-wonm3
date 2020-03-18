@@ -47,7 +47,7 @@ class Date
 
     public function changeDay($day): void
     {
-        $new_day = $this->day + $this->day;
+        $new_day = $this->day + $day;
         if ($new_day > 31) {
             $new_day -= 31;
         }
