@@ -25,6 +25,11 @@ class Date
         }
 
         $this->year = $year;
+        if (!(is_numeric($year))){
+            throw new DateException("Een jaar mag enkel getallen zijn!");
+        }
+
+
     }
 
     public function print()
