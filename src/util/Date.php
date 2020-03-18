@@ -11,8 +11,19 @@ class Date
 
     private function __construct($day = 1, $month = 1, $year = 2008)
     {
-        $this->day = $day;
-        $this->month = $month;
+        if ($day > 31) {
+            throw new DateException("Er zijn maar 31 dagen!");
+        } else {
+            $this->day = $day;
+
+        }
+
+        if ($month > 12) {
+            throw new DateException("Er zijn maar 12 maanden!");
+        } else {
+            $this->month = $month;
+        }
+
         $this->year = $year;
     }
 
